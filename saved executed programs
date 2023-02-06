@@ -551,7 +551,243 @@ OUTPUT:-
 
 enter the first binary number: 12
 enter the second binary number: product of two binary numbers: 0
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--qstn-25
+#include<stdio.h>    
+#include<stdlib.h>  
+int main()
+{  
+       int a[10],n,i;    
+       system ("cls");  
+       printf("Enter the number to convert: ");    
+       scanf("%d",&n);    
+       for(i=0;n>0;i++)    
+       {    
+              a[i]=n%2;    
+              n=n/2; 
+              printf("\nBinary of Given Number is=");  
+              or f(i=i-1;i>=0;i--)    
+       }
+             {    
+                       printf("%d",a[i]);    
+              }    
+                               return 0;  
+}  
+---------------------------------------------------------------------------------------------------------------------------------------------------
+qstn-26
+#include<stdio.h>
+int main() {
+  double first, second, temp;
+  printf("Enter first number: ");
+  scanf("%lf", &first);
+  printf("Enter second number: ");
+  scanf("%lf", &second);
+
+  // value of first is assigned to temp
+  temp = first;
+
+  // value of second is assigned to first
+  first = second;
+
+  // value of temp (initial value of first) is assigned to second
+  second = temp;
+
+  // %.2lf displays number up to 2 decimal points
+  printf("\nAfter swapping, first number = %.2lf\n", first);
+  printf("After swapping, second number = %.2lf", second);
+  return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------------------
+qstn-27
+echo “ enter a number”
+read a
+square = `expr $a \* $a`
+echo $square
+-----------------------------------------------------------------------------------------------------------------------------------
+qstn-28
+#! /bin/bash
+
+echo "enter a number:"
+read a
+cube=`expr "$a" \* "$a" \* "$a" `
+echo "The cube of $a=" $cube
+------------------------------------------------------------------------------------------------------------------------------------
+qstn-29
+echo “Enter the side of the square:”
+read s
+echo “Enter the length and breadth of rectangle:”
+read leng
+read brea
+echo “Enter the radius of the circle:”
+read radius
+echo “Area of the square is:` expr $s \* $s ` ”
+echo “Area of the rectangle is: `expr $leng \* $brea`”
+echo “Area of the circle is: `expr 3.14 \* radius \* radius`”
+------------------------------------------------------------------------------------------------------------------------------------
+qstn-30
+------------------------------------------------------------------------------------------------------------------------------------
+qstn-31
+# !/bin/bash
+
+# Program to swap two numbers
+
+# Static input of the
+# number
+first=5
+second=10
+
+temp=$first
+first=$second
+second=$temp
+
+echo "After swapping, numbers are:"
+echo "first = $first, second = $second"
+----------------------------------------------------------------------------------------------------------------------------------------
+qstn 32
+echo "Enter Num1"
+read num1
+echo "Enter Num2"
+read num2
+echo "Enter Num3"
+read num3
+
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]
+then
+    echo $num1
+elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ]
+then
+    echo $num2
+else
+    echo $num3
+fi
+--------------------------------------------------------------------------------------------------------------------------
+qstn 33
+echo -n "Enter year (YYYY): "
+read y
+a = 'expr $y%4'
+b = 'expr $y%100'
+c = 'expr $y%400'
+if[$a -eq 0 -a $b -ne - -o $c -eq 0]
+then 
+echo "$y is leap year"
+else
+echo "$y is not a leap year"
+
+fi
+----------------------------------------------------------------------------------------------------------------------------
+qstn 34
+echo -n "Please enter a whole number: "
+read VAR
+echo Your number is $VAR
+if test $VAR -gt 100
+then
+        echo "It's greater than 100"
+fi
+echo Bye!
+----------------------------------------------------------------------------------------------------------------------------
+qstn 35
+#!/bin/sh
+
+# take two integers from the user
+echo "Enter two integers: "
+read a b
+
+# perform addition
+result=`expr $a + $b`
+
+# show result
+echo "Result: $result"
+-----------------------------------------------------------------------------------------------------------------------------
+qstn 36
+echo "Enter a integer number"
+read n
+a=1
+echo "Printing numbers:"
+while [ $a -le $n ]
+do 
+echo "$a"
+a=`expr $a + 1`
+done
+------------------------------------------------------------------------------------------------------------------------------
+qstn 37
+#! /bin/bash
+#Website : cs.sounak.in
+# Author: Sounak Pal
+## Script to check a number palindrome or not
+echo &quot;Enter a Number&quot;
+read n
+temp=$n
+while ((temp>0))
+   do
+      ans=$((ans*10))
+      mod=$((temp%10))
+      ans=$((ans+mod))
+      temp=$((temp/10))
+   done
+if (($n == $ans))
+   then
+      echo "It's a Palindrome Number"
+   else
+   echo "It's not a Palindrome Number"
+   fi
+-------------------------------------------------------------------------------------------------------------------------------
+qstn 38
+#!/bin/bash
+read a
+read b
+read c
+
+d=$((b*b-4*a*c))
+
+if ((d>=0)); then
+    calc=$(echo "sqrt ($d)" | bc )
+    x1=$((-b/2*a+calc/2*a))
+    x2=$((-b/2*a-calc/2*a))
+    echo "$x1""$x2"
+else
+    echo "To trionimo den exei pragmatikes rizes"
+fi
+------------------------------------------------------------------------------------------------------------------------------
+qstn 39
+echo enter n
+read n
+c=$(echo "obase=2;$n" | bc)
+echo binary $c
+------------------------------------------------------------------------------------------------------------------------------
+qstn 40
+#!/bin/bash
+# Recursive factorial function
+
+factorial()
+{
+    product=$1
+           
+    # Defining a function to calculate factorial using recursion
+    if((product <= 2)); then
+        echo $product
+    else
+        f=$((product -1))
+        
+# Recursive call
+
+f=$(factorial $f)
+f=$((f*product))
+echo $f
+fi
+}
+
+# main program
+# reading the input from user
+echo "Enter the number:"   
+read num
+
+# defining a special case for 0! = 1
+if((num == 0)); then   
+echo 1
+else
+#calling the function
+factorial $num
+fi
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
